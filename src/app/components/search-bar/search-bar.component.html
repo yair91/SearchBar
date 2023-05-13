@@ -1,0 +1,21 @@
+<div class="container-fluid ml-5 pt-4 size row  align-items-end">
+  <div class="d-flex justify-content-center">
+    <div class="col-9">
+
+      <form [formGroup]="formGroup">
+        <mat-form-field class="d-flex justify-content-center pb-5">
+          <mat-label>
+            Employee
+          </mat-label>
+          <input matInput formControlName="person" type="text" [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete" >
+            <mat-option *ngFor="let item of filteredOptions" [value]="item">
+              {{item}}    
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+
+    </div>
+  </div>
+</div>
